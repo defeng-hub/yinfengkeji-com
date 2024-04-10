@@ -17,7 +17,9 @@
 </div>
 <div class="header">
     <div class="center flex">
-        <a href="/" class="logo1"><img src="{{.config.logo}}" alt="" style="height: 50px;width: 50px"/></a>
+        <a href="/" class="logo1">
+            <img src="{{.config.logo}}" alt="" style="height: 50px;width: 160px;margin-top: 15px"/>
+        </a>
         <ul class="head_nav_content">
             {{range $pk,$pv := .pCate}}
             <li class="head_nav" data-url='{{.Banner}}' data-id="{{.Id}}" id="pn_{{.Id}}">
@@ -46,7 +48,7 @@
 </div>
 
 <div class="nav">
-    <a href="" class="logo1"><img src="{{.config.logo}}" alt="" style="height: 50px;width: 50px"/></a>
+    <a href="" class="logo1"><img src="{{.config.logo}}" alt="" style="height: 40px;width: 138px;margin-top: 4px;"/></a>
     <div class="menu">
         <div class="aa"></div>
         <div class="bb"></div>

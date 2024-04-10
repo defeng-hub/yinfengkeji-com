@@ -5,7 +5,6 @@ import (
 	"github.com/beego/beego/v2/core/config"
 	"github.com/beego/beego/v2/core/logs"
 	"io/ioutil"
-	"kaiyu-web/models"
 	"os"
 	"reflect"
 	"regexp"
@@ -37,7 +36,7 @@ var (
 
 func init() {
 	// registerModels = append(registerModels, ViewModel{model: models.Ad{}})
-	registerModels = append(registerModels, ViewModel{model: models.UserLog{}})
+	//registerModels = append(registerModels, ViewModel{model: models.UserLog{}})
 }
 
 func NewView() {
@@ -71,7 +70,7 @@ func NewView() {
 	}
 }
 
-//路由配置处理
+// 路由配置处理
 func (v *View) writeConfigJs(typeStr string) {
 	perms := fmt.Sprintf("{perms:\"%v-%v\", view: () => import('@/sa-view/%v/%v.vue')},",
 		v.BaseName, typeStr, v.BaseName, typeStr)
@@ -187,7 +186,7 @@ func (v *View) listView(rv reflect.Value, typ reflect.Type) {
 	v.writeConfigJs(LIST)
 }
 
-//列表查询表单
+// 列表查询表单
 func (v *View) elForm(columnName string, field reflect.StructField) (formStr string, query string) {
 	typeName := field.Tag.Get("json")
 	fieldType := fmt.Sprintf("%v", field.Type)
@@ -215,7 +214,7 @@ func (v *View) elForm(columnName string, field reflect.StructField) (formStr str
 	return formStr, query
 }
 
-//列表表格
+// 列表表格
 func (v *View) elTableColumn(columnName string, field reflect.StructField) (selectData string, tableStr string, fileStr string) {
 	//正在表达式去列名
 	tag := field.Tag
