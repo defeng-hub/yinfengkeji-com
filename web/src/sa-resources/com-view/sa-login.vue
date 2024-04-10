@@ -71,7 +71,7 @@
         <div class="login-box">
             <div class="login-box-2">
                 <div class="login-top">
-                    <img src="./../index/logo.png" class="logo-img">
+                    <img src="./../index/admin-logo.png" class="logo-img">
                     <span class="admin-title">银丰科耀</span>
                 </div>
                 <div class="from-box">
